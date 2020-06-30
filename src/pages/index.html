@@ -6,10 +6,27 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<main class="main"></main>
+		<main class="main">
 			<h1 class="header">simple editor</h1>
 			<form class="form">
-				<textarea></textarea>
+				<textarea
+					class="form__textarea"
+					id="text"
+					name="text"
+					placeholder="placeholder"
+				></textarea>
+				<input
+					class="form__button form__button--load"
+					name="load"
+					type="button"
+					value="load"
+				/>
+				<input
+					class="form__button form__button--save"
+					name="save"
+					type="submit"
+					value="save"
+				/>
 			</form>
 		</main>
 	</body>

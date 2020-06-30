@@ -1,14 +1,58 @@
 @import "~normalize.css";
 @import "_variables";
 
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	text-decoration: none;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: monospace;
+}
+
 body {
-  background: #E5E5E5;
-  min-height: 100vh;
+	background: #e5e5e5;
+	min-height: 100vh;
 }
 
 .main {
-  display: grid;
-  grid-template-columns: repeat(12, 64px);
-  column-gap: 32px;
+	margin: 0 auto;
+	width: 1120px;
+	display: grid;
+	grid-template-rows: 80px 264px;
+	grid-template-columns: repeat(12, 64px);
+	column-gap: 32px;
 }
+
+.header {
+	grid-column: 4 / span 3;
+	grid-row: 1 / 2;
+}
+.form {
+	grid-column: 4 / span 6;
+	display: grid;
+	grid-template-columns: repeat(6, 64px);
+	column-gap: 32px;
+	grid-template-rows: 200px 40px;
+	row-gap: 24px;
+}
+.form__textarea {
+grid-column: 1 / span 6;
+}
+
+.form__button {
+  height: 40px;
+}
+
+.form__button--load {
+	grid-area: 2 / 5 / span 1 / span 1;
+}
+
+.form__button--save {
+	grid-area: 2 / 6 / span 1 / span 1;
+}
+
 
