@@ -1,4 +1,4 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 
 // uncomment the lines below to enable PWA
 // import {registerSW} from './pwa.js';
@@ -6,4 +6,23 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+const entry = localStorage.getItem("entry");
+
+let result = "";
+
+if (entry) {
+	result = entry;
+}
+
+const entryTextarea = document.querySelector(".form__textarea--js");
+
+const save = document.querySelector(".form__button--save--js");
+const load = document.querySelector(".form__button--load--js");
+
+save.addEventListener("click", () => {
+	localStorage.setItem("entry", entryTextarea.value);
+});
+
+load.addEventListener("click", () => {
+	entryTextarea.value = result;
+});
