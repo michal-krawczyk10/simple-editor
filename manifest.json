@@ -1,0 +1,10 @@
+{
+  "name": "WTF: PWA",
+  "short_name": "WTF: PWA",
+  "theme_color": "#2D2241",
+  "background_color": "#2D2241",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/wtf-webpack-starter/",
+  "start_url": "/wtf-webpack-starter/"
+}
