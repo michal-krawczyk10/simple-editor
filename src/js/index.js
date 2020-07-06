@@ -19,10 +19,18 @@ const entryTextarea = document.querySelector(".form__textarea--js");
 const save = document.querySelector(".form__button--save--js");
 const load = document.querySelector(".form__button--load--js");
 
-save.addEventListener("click", () => {
+const currentValue = localStorage.getItem("entry");
+
+if (currentValue) {
+	document.querySelector(".info--js").innerHTML = "!";
+}
+
+save.addEventListener("click", (e) => {
+	e.preventDefault();
 	localStorage.setItem("entry", entryTextarea.value);
 });
 
-load.addEventListener("click", () => {
+load.addEventListener("click", (e) => {
+	e.preventDefault();
 	entryTextarea.value = result;
 });

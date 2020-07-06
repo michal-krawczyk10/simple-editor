@@ -20,7 +20,7 @@ body {
 
 .main {
 	margin: 0 auto;
-	width: 1120px;
+	max-width: 1120px;
 	display: grid;
 	grid-template-rows: 80px 264px;
 	grid-template-columns: repeat(12, 64px);
@@ -38,21 +38,18 @@ body {
 	column-gap: 32px;
 	grid-template-rows: 200px 40px;
 	row-gap: 24px;
+	&__textarea {
+		grid-column: 1 / span 6;
+		border-radius: 4px;
+padding: 16px;
+	}
+	&__button {
+		height: 40px;
+		&--load {
+			grid-area: 2 / 5 / span 1 / span 1;
+		}
+		&--save {
+			grid-area: 2 / 6 / span 1 / span 1;
+		}
+	}
 }
-.form__textarea {
-grid-column: 1 / span 6;
-}
-
-.form__button {
-  height: 40px;
-}
-
-.form__button--load {
-	grid-area: 2 / 5 / span 1 / span 1;
-}
-
-.form__button--save {
-	grid-area: 2 / 6 / span 1 / span 1;
-}
-
-
