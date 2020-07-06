@@ -28,6 +28,11 @@ if (currentValue) {
 save.addEventListener("click", (e) => {
 	e.preventDefault();
 	localStorage.setItem("entry", entryTextarea.value);
+	if (entryTextarea.value) {
+		document.querySelector(".info--js").innerHTML = "!";
+	} else {
+		document.querySelector(".info--js").innerHTML = "";
+	}
 });
 
 load.addEventListener("click", (e) => {
